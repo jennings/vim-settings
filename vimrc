@@ -43,6 +43,8 @@ syntax on                      " turn on syntax highlighting
 set mouse=a                    " use the mouse in all modes
 set ttymouse=xterm2
 
+call pathogen#infect()
+
 " dont load csapprox if we no gui support - silences an annoying warning
 if !has("gui")
     let g:CSApprox_loaded = 1
