@@ -66,6 +66,11 @@ nnoremap Y y$
 " mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 
+" keep highlight when shifting blocks
+vmap > >gv
+vmap < <gv
+
+" use ctrl-arrow to switch windows
 nmap <C-Left> <C-w>h
 nmap <C-Down> <C-w>j
 nmap <C-Up> <C-w>k
