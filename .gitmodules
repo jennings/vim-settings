@@ -19,3 +19,6 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "bundle/rst-tables"]
+	path = bundle/rst-tables
+	url = https://github.com/nvie/vim-rst-tables.git
