@@ -68,6 +68,9 @@ nnoremap Y y$
 " mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 
+" Insert returns around braces
+let g:delimitMate_expand_cr=1
+
 " keep highlight when shifting blocks
 vmap > >gv
 vmap < <gv
