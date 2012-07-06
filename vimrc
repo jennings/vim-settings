@@ -46,6 +46,7 @@ set mouse=a                    " use the mouse in all modes
 set ttymouse=xterm2
 
 call pathogen#infect()
+call pathogen#helptags()
 
 " dont load csapprox if we no gui support - silences an annoying warning
 if !has("gui")
@@ -55,12 +56,6 @@ endif
 " make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
-
-" map to bufexplorer
-nnoremap <C-B> :BufExplorer<cr>
-
-" map to fuzzy finder text mate stylez
-nnoremap <c-f> :FuzzyFinderTextMate<CR>
 
 " make Y consistent with C and D
 nnoremap Y y$
