@@ -65,6 +65,9 @@ nnoremap <c-f> :FuzzyFinderTextMate<CR>
 " make Y consistent with C and D
 nnoremap Y y$
 
+" make Q do something more useful
+nnoremap Q @q
+
 " mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 
