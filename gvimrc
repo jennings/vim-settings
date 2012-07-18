@@ -8,11 +8,12 @@ endif
 
 set lines=42
 set columns=100
+if &diff
+    let &columns = ((&columns*2 > 150)? 150: &columns*2)
+endif
 
 colorscheme obsidian2
 
-" No audible bell
-set vb
-
-" No toolbar
-set guioptions-=T
+set vb            " No audible bell
+set guioptions-=T " No toolbar
+set cursorline    " highlight current line

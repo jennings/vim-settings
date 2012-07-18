@@ -38,20 +38,21 @@ set scrolloff=3                " scroll the viewport when X lines from top/botto
 set sidescrolloff=7            " scroll the viewport when X lines from left/right edges
 set sidescroll=1               " minimum lines to scroll left/right
 
-filetype plugin on             " load filetype plugins
-filetype indent on             " load filetype indenting
-syntax on                      " turn on syntax highlighting
+let mapleader = ","            " comma is easier to type
 
 set mouse=a                    " use the mouse in all modes
 set ttymouse=xterm2
 
+set ignorecase                 " ignore case in searches
+set smartcase                  " unless the search string has a capital letter
+
+filetype plugin on             " load filetype plugins
+filetype indent on             " load filetype indenting
+syntax on                      " turn on syntax highlighting
+
+
 call pathogen#infect()
 call pathogen#helptags()
-
-" dont load csapprox if we no gui support - silences an annoying warning
-if !has("gui")
-    let g:CSApprox_loaded = 1
-endif
 
 " make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
@@ -62,9 +63,6 @@ nnoremap Y y$
 
 " make Q do something more useful
 nnoremap Q @q
-
-" mark syntax errors with :signs
-let g:syntastic_enable_signs=1
 
 " Insert returns around braces
 let g:delimitMate_expand_cr=1
