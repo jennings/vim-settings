@@ -1,5 +1,5 @@
 if has("win32") || has("win64")
-    set guifont=Inconsolata:h12.00
+    set guifont=Consolas:h10
 endif
 
 if has("mac")
