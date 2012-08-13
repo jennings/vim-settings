@@ -83,6 +83,8 @@ set statusline+=%y " filetype
 set statusline+=%r " read only flag
 set statusline+=%m " modified flag
 
+set statusline+=%{fugitive#statusline()}            " show git information
+
 set statusline+=%#warningmsg#                                   " warnings
 set statusline+=%{&ff!='unix'?'['.&ff.']':''}                   " warn on line endings
 set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''} " display non-UTF-8 encodings
@@ -150,7 +152,7 @@ function! StatuslineTabWarning()
         if tabs && spaces
             let b:statusline_tab_warning =  '[mixed-indenting]'
         elseif (spaces && !&et) || (tabs && &et)
-            let b:statusline_tab_warning = '[&et]'
+            let b:statusline_tab_warning = '[&expandtab]'
         else
             let b:statusline_tab_warning = ''
         endif
