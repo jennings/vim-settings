@@ -12,7 +12,6 @@ set incsearch                  " find the next match as we type the search
 set hlsearch                   " highlight searches by default
 set nowrap                     " don't wrap lines by default...
 set linebreak                  " ...but do it intelligently if we :set wrap
-set autochdir                  " change current directory to opened file
 set number                     " line numbers
 set pastetoggle=<F5>           " sets paste mode
 set hidden                     " don't close abandoned buffers
