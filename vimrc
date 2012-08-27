@@ -73,9 +73,9 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-set statusline=\     " start with a space
-set statusline+=%f\  " tail of the filename
-set statusline+=%y   " filetype
+set statusline=\ #%n " buffer number
+set statusline+=\ %t " tail of the filename
+set statusline+=\ %y " filetype
 set statusline+=%r   " read only flag
 set statusline+=%m   " modified flag
 
