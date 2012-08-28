@@ -73,6 +73,11 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+nmap <Leader>n :NERDTree<CR>
+
+" CtrlP: find a repository as the root
+let g:ctrlp_working_path_mode = 'r'
+
 set statusline=\ #%n " buffer number
 set statusline+=\ %t " tail of the filename
 set statusline+=\ %y " filetype
