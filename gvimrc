@@ -7,7 +7,7 @@ if has("mac")
 endif
 
 set lines=42
-set columns=100
+set columns=150
 if &diff
     let &columns = ((&columns*2 > 150)? 150: &columns*2)
 endif
