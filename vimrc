@@ -78,6 +78,12 @@ nmap <Leader>n :NERDTree<CR>
 " CtrlP: find a repository as the root
 let g:ctrlp_working_path_mode = 'r'
 
+" NERDTree: Ignore stuff
+let g:NERDTreeIgnore=[]
+let g:NERDTreeIgnore+=['\~$']
+let g:NERDTreeIgnore+=['\.py[cod]$']
+let g:NERDTreeIgnore+=['\.[oa]$']
+
 set statusline=\ #%n " buffer number
 set statusline+=\ %t " tail of the filename
 set statusline+=\ %y " filetype
