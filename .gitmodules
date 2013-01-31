@@ -31,3 +31,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/powershell"]
+	path = bundle/powershell
+	url = https://github.com/PProvost/vim-ps1.git
