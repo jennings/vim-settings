@@ -12,7 +12,7 @@ if &diff
     let &columns = ((&columns*2 > 150)? 150: &columns*2)
 endif
 
-colorscheme obsidian2
+colorscheme solarized
 
 set vb            " No audible bell
 set guioptions-=T " No toolbar
