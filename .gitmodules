@@ -34,6 +34,12 @@
 [submodule "bundle/powershell"]
 	path = bundle/powershell
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = https://github.com/tpope/vim-rails.git
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/golang"]
+	path = bundle/golang
+	url = https://github.com/jnwhiteh/vim-golang.git
