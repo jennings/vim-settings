@@ -53,9 +53,14 @@ syntax on                      " turn on syntax highlighting
 call pathogen#infect()
 call pathogen#helptags()
 
-" make <c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
+" easier to clear the highlight
+nnoremap <Esc><Esc> <Esc><Esc>:noh<CR>
+
+" move around visually
+nnoremap gj j
+nnoremap gk k
+nnoremap j gj
+nnoremap k gk
 
 " make Y consistent with C and D
 nnoremap Y y$
@@ -77,6 +82,9 @@ nmap <Leader>n :NERDTree<CR>
 
 " CtrlP: find a repository as the root
 let g:ctrlp_working_path_mode = 'r'
+
+" CtrlP: let's use it more often
+nnoremap ; :CtrlP<CR>
 
 " NERDTree: Ignore stuff
 let g:NERDTreeIgnore=[]
