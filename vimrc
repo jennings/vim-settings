@@ -53,7 +53,14 @@ syntax on                      " turn on syntax highlighting
 call pathogen#infect()
 call pathogen#helptags()
 
+
+autocmd Filetype ruby      setlocal shiftwidth=2 softtabstop=2
+autocmd Filetype haml      setlocal shiftwidth=2 softtabstop=2
+autocmd Filetype go        setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype gitconfig setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd Filetype snippets  setlocal shiftwidth=8 softtabstop=8 noexpandtab
+
+
 " easier to clear the highlight
 nnoremap <Esc><Esc> <Esc><Esc>:noh<CR>
 
@@ -85,7 +92,7 @@ nmap <Leader>n :NERDTree<CR>
 let g:ctrlp_working_path_mode = 'r'
 
 " CtrlP: let's use it more often
-nnoremap ; :CtrlP<CR>
+nnoremap ; :CtrlPMixed<CR>
 
 " NERDTree: Ignore stuff
 let g:NERDTreeIgnore=[]
