@@ -53,6 +53,7 @@ syntax on                      " turn on syntax highlighting
 call pathogen#infect()
 call pathogen#helptags()
 
+autocmd Filetype snippets  setlocal shiftwidth=8 softtabstop=8 noexpandtab
 " easier to clear the highlight
 nnoremap <Esc><Esc> <Esc><Esc>:noh<CR>
 
