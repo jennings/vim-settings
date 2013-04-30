@@ -23,6 +23,9 @@ set autoindent
 
 set nojoinspaces               " two spaces after a period is soooo archaic
 
+set splitbelow
+set splitright
+
 set foldmethod=indent          " fold based on indent
 set foldnestmax=3              " deepest fold is 3 levels
 set nofoldenable               " don't fold by default
