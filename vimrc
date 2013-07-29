@@ -1,6 +1,7 @@
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible
+set noexrc
 
 colorscheme darkzen
 
@@ -102,6 +103,7 @@ let g:NERDTreeIgnore=[]
 let g:NERDTreeIgnore+=['\~$']
 let g:NERDTreeIgnore+=['\.py[cod]$']
 let g:NERDTreeIgnore+=['\.[oa]$']
+let g:NERDTreeChDirMode=2
 
 set statusline=\ #%n " buffer number
 set statusline+=\ %t " tail of the filename
