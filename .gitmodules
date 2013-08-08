@@ -58,3 +58,15 @@
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
 	branch = master
+[submodule "bundle/javascript"]
+	path = bundle/javascript
+	url = https://github.com/pangloss/vim-javascript
+	branch = master
+[submodule "bundle/mustache"]
+	path = bundle/mustache
+	url = https://github.com/juvenn/mustache.vim
+	branch = master
+[submodule "bundle/html5"]
+	path = bundle/html5
+	url = https://github.com/othree/html5.vim
+	branch = master
