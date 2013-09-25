@@ -70,3 +70,7 @@
 	path = bundle/html5
 	url = https://github.com/othree/html5.vim
 	branch = master
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate
+	branch = master
