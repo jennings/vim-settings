@@ -36,6 +36,7 @@ set wildmenu                   " enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~    " stuff to ignore when tab completing
 
 set formatoptions-=o           " don't continue comments when pushing o/O
+set formatoptions+=j           " remove comment leader when joining lines with J
 
 set scrolloff=3                " scroll the viewport when X lines from top/bottom edges
 set sidescrolloff=7            " scroll the viewport when X lines from left/right edges
