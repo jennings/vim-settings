@@ -16,4 +16,5 @@ colorscheme solarized
 
 set vb            " No audible bell
 set guioptions-=T " No toolbar
+set guioptions+=b " Add horizontal scroll bar
 set cursorline    " highlight current line
