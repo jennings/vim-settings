@@ -91,20 +91,14 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-nmap <Leader>n :NERDTree<CR>
+" fancy-schmancy leader mappings
+nnoremap <Leader>n :Explore<CR>
 
 " CtrlP: find a repository as the root
 let g:ctrlp_working_path_mode = 'r'
 
 " CtrlP: let's use it more often
 nnoremap ; :CtrlPMixed<CR>
-
-" NERDTree: Ignore stuff
-let g:NERDTreeIgnore=[]
-let g:NERDTreeIgnore+=['\~$']
-let g:NERDTreeIgnore+=['\.py[cod]$']
-let g:NERDTreeIgnore+=['\.[oa]$']
-let g:NERDTreeChDirMode=2
 
 set statusline=\ #%n " buffer number
 set statusline+=\ %t " tail of the filename
