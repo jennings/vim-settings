@@ -82,17 +82,18 @@ nnoremap Y y$
 nnoremap Q @q
 
 " keep highlight when shifting blocks
-vmap > >gv
-vmap < <gv
+vnoremap > >gv
+vnoremap < <gv
 
 " use ctrl-arrow to switch windows
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " fancy-schmancy leader mappings
 nnoremap <Leader>n :Explore<CR>
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
 " CtrlP: find a repository as the root
 let g:ctrlp_working_path_mode = 'r'
