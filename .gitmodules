@@ -74,3 +74,11 @@
 	path = bundle/typescript
 	url = https://github.com/leafgarland/typescript-vim
 	branch = master
+[submodule "bundle/fireplace"]
+	path = bundle/fireplace
+	url = https://github.com/tpope/vim-fireplace
+	branch = master
+[submodule "bundle/clojure-static"]
+	path = bundle/clojure-static
+	url = https://github.com/guns/vim-clojure-static
+	branch = master
