@@ -33,7 +33,9 @@ set nofoldenable               " don't fold by default
 
 set wildmode=list:longest      " make cmdline tab completion similar to bash
 set wildmenu                   " enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~    " stuff to ignore when tab completing
+set wildignore=*.o,*.obj       " ignore C stuff
+set wildignore+=*~,*.swp       " ignore Vim cruft
+set wildignore+=*/_site/*      " ignore Jekyll built scripts
 
 set formatoptions-=o           " don't continue comments when pushing o/O
 set formatoptions+=j           " remove comment leader when joining lines with J
@@ -95,6 +97,9 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>n :Explore<CR>
 nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
+" netrw stuff
+let g:netrw_list_hide='.*\.swp$,^_site/$'
+
 " CtrlP: find a repository as the root
 let g:ctrlp_working_path_mode = 'r'
 
@@ -136,7 +141,6 @@ autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
 
 "recalculate the long line warning when idle and after saving
 autocmd cursorhold,bufwritepost * unlet! b:statusline_long_line_warning
-
 
 "return '[\s]' if trailing white space is detected
 "return '' otherwise
