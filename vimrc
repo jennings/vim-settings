@@ -93,8 +93,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" fancy-schmancy leader mappings
-nnoremap <Leader>n :Explore<CR>
+nnoremap <Leader>n :NERDTree<CR>
 nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
 " netrw stuff
@@ -105,6 +104,13 @@ let g:ctrlp_working_path_mode = 'r'
 
 " CtrlP: let's use it more often
 nnoremap ; :CtrlPMixed<CR>
+
+" NERDTree: Ignore stuff
+let g:NERDTreeIgnore=[]
+let g:NERDTreeIgnore+=['\~$']
+let g:NERDTreeIgnore+=['\.py[cod]$']
+let g:NERDTreeIgnore+=['\.[oa]$']
+let g:NERDTreeChDirMode=2
 
 set statusline=\ #%n " buffer number
 set statusline+=\ %t " tail of the filename
