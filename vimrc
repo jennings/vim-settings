@@ -67,6 +67,8 @@ autocmd Filetype go        setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd Filetype gitconfig setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd Filetype snippets  setlocal shiftwidth=8 softtabstop=8 noexpandtab
 
+autocmd FileType go         compiler go
+
 " add a new line above
 inoremap <S-CR> <C-o>O
 
