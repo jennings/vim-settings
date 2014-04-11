@@ -67,6 +67,8 @@ autocmd Filetype go        setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd Filetype gitconfig setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd Filetype snippets  setlocal shiftwidth=8 softtabstop=8 noexpandtab
 
+" add a new line above
+inoremap <S-CR> <C-o>O
 
 " easier to clear the highlight
 nnoremap <Esc><Esc> <Esc><Esc>:noh<CR>
