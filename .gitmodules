@@ -86,3 +86,7 @@
 	path = bundle/clojure-static
 	url = https://github.com/guns/vim-clojure-static
 	branch = master
+[submodule "bundle/rust"]
+	path = bundle/rust
+	url = https://github.com/wting/rust.vim
+	branch = master
