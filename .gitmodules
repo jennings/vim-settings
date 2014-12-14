@@ -90,3 +90,11 @@
 	path = bundle/rust
 	url = https://github.com/wting/rust.vim
 	branch = master
+[submodule "bundle/coffee-script"]
+	path = bundle/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+	branch = master
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+	branch = master

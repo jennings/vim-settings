@@ -63,11 +63,15 @@ call pathogen#helptags()
 
 autocmd Filetype ruby      setlocal shiftwidth=2 softtabstop=2
 autocmd Filetype haml      setlocal shiftwidth=2 softtabstop=2
+autocmd Filetype coffee    setlocal shiftwidth=2 softtabstop=2
 autocmd Filetype go        setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd Filetype gitconfig setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd Filetype snippets  setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype yaml      setlocal shiftwidth=2 softtabstop=2
 
 autocmd FileType go         compiler go
+
+autocmd FileType lisp       let b:delimitMate_smart_quotes = 0
 
 " add a new line above
 inoremap <S-CR> <C-o>O
