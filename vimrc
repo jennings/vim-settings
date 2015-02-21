@@ -3,8 +3,6 @@
 set nocompatible
 set noexrc
 
-colorscheme darkzen
-
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set history=1000               " store lots of :cmdline history
 set showcmd                    " show incomplete cmds down the bottom
@@ -60,6 +58,9 @@ syntax on                      " turn on syntax highlighting
 call pathogen#infect()
 call pathogen#helptags()
 
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 autocmd Filetype ruby      setlocal shiftwidth=2 softtabstop=2
 autocmd Filetype haml      setlocal shiftwidth=2 softtabstop=2
