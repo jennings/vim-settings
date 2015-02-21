@@ -142,16 +142,20 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>n :NERDTree<CR>
-nnoremap <Leader>b :buffers<CR>:buffer<Space>
+nnoremap <Leader><Leader> :buffers<CR>:buffer<Space>
+nnoremap <Leader>u :GundoToggle<CR>
+nnoremap ; :CtrlPMixed<CR>
 
 " netrw stuff
 let g:netrw_list_hide='.*\.swp$,^_site/$'
+
+" Gundo
+let g:gundo_playback_delay=200
 
 " CtrlP: find a repository as the root
 let g:ctrlp_working_path_mode = 'r'
 
 " CtrlP: let's use it more often
-nnoremap ; :CtrlPMixed<CR>
 
 " NERDTree: Ignore stuff
 let g:NERDTreeIgnore=[]

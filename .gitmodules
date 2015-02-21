@@ -106,3 +106,7 @@
 	path = bundle/omnisharp
 	url = https://github.com/OmniSharp/omnisharp-vim
 	branch = master
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = https://github.com/sjl/gundo.vim
+	branch = master
