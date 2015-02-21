@@ -55,8 +55,8 @@ filetype indent on             " load filetype indenting
 syntax on                      " turn on syntax highlighting
 
 
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
+execute pathogen#helptags()
 
 set background=dark
 let g:solarized_termcolors=256
