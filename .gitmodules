@@ -98,3 +98,11 @@
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 	branch = master
+[submodule "bundle/dispatch"]
+	path = bundle/dispatch
+	url = https://github.com/tpope/vim-dispatch
+	branch = master
+[submodule "bundle/omnisharp"]
+	path = bundle/omnisharp
+	url = https://github.com/OmniSharp/omnisharp-vim
+	branch = master
