@@ -110,3 +110,11 @@
 	path = bundle/gundo
 	url = https://github.com/sjl/gundo.vim
 	branch = master
+[submodule "bundle/youcompleteme"]
+	path = bundle/youcompleteme
+	url = https://github.com/Valloric/YouCompleteMe
+	branch = master
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+	branch = master
