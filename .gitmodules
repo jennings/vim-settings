@@ -118,3 +118,11 @@
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
 	branch = master
+[submodule "bundle/polyglot"]
+	path = bundle/polyglot
+	url = https://github.com/sheerun/vim-polyglot
+	branch = master
+[submodule "bundle/purescript"]
+	path = bundle/purescript
+	url = https://github.com/raichoo/purescript-vim
+	branch = master
