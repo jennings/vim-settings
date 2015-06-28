@@ -50,10 +50,6 @@
 	path = bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 	branch = master
-[submodule "bundle/golang"]
-	path = bundle/golang
-	url = https://github.com/jnwhiteh/vim-golang.git
-	branch = master
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
@@ -125,4 +121,8 @@
 [submodule "bundle/purescript"]
 	path = bundle/purescript
 	url = https://github.com/raichoo/purescript-vim
+	branch = master
+[submodule "bundle/go"]
+	path = bundle/go
+	url = https://github.com/fatih/vim-go.git
 	branch = master
