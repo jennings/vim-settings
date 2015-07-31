@@ -146,6 +146,14 @@ nnoremap <Leader><Leader> :buffers<CR>:buffer<Space>
 nnoremap <Leader>u :GundoToggle<CR>
 nnoremap ; :CtrlPMixed<CR>
 
+" on Windows, use CTRL-C and CTRL-V for copy/paste
+if has ("win32")
+    vnoremap <C-c> "+y
+    vnoremap <C-v> "+p
+    nnoremap <C-v> "+p
+    inoremap <C-v> <C-o>"+p
+endif
+
 " netrw stuff
 let g:netrw_list_hide='.*\.swp$,^_site/$'
 
