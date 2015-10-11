@@ -45,7 +45,9 @@ set sidescroll=1               " minimum lines to scroll left/right
 let mapleader = ","            " comma is easier to type
 
 set mouse=a                    " use the mouse in all modes
-set ttymouse=xterm2
+if !has('nvim')
+    set ttymouse=xterm2
+endif
 
 set ignorecase                 " ignore case in searches
 set smartcase                  " unless the search string has a capital letter
