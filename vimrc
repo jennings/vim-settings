@@ -144,7 +144,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>n :NERDTree<CR>
-nnoremap <Leader><Leader> :buffers<CR>:buffer<Space>
+nnoremap <Leader><Leader> :CtrlPBuffer<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 nnoremap ; :CtrlPMixed<CR>
 
