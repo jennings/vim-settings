@@ -62,13 +62,15 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
-autocmd Filetype ruby      setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype haml      setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype coffee    setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype go        setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd Filetype gitconfig setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd Filetype snippets  setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd Filetype yaml      setlocal shiftwidth=2 softtabstop=2
+autocmd Filetype ruby       setlocal shiftwidth=2 softtabstop=2
+autocmd Filetype haml       setlocal shiftwidth=2 softtabstop=2
+autocmd Filetype coffee     setlocal shiftwidth=2 softtabstop=2
+autocmd Filetype go         setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype gitconfig  setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype javascript setlocal shiftwidth=2 softtabstop=2
+autocmd Filetype json       setlocal shiftwidth=2 softtabstop=2
+autocmd Filetype snippets   setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype yaml       setlocal shiftwidth=2 softtabstop=2
 
 autocmd FileType go         compiler go
 
