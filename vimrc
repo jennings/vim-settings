@@ -70,15 +70,19 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
-autocmd Filetype ruby       setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype haml       setlocal shiftwidth=2 softtabstop=2
+" 2 space languages
 autocmd Filetype coffee     setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype go         setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd Filetype gitconfig  setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype haml       setlocal shiftwidth=2 softtabstop=2
 autocmd Filetype javascript setlocal shiftwidth=2 softtabstop=2
 autocmd Filetype json       setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype snippets   setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype ruby       setlocal shiftwidth=2 softtabstop=2
 autocmd Filetype yaml       setlocal shiftwidth=2 softtabstop=2
+
+" tabs, yuck
+autocmd Filetype gitconfig  setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype go         setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype make       setlocal shiftwidth=8 softtabstop=8 noexpandtab
+autocmd Filetype snippets   setlocal shiftwidth=8 softtabstop=8 noexpandtab
 
 autocmd FileType go         compiler go
 
