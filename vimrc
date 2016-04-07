@@ -60,6 +60,12 @@ syntax on                      " turn on syntax highlighting
 execute pathogen#infect()
 execute pathogen#helptags()
 
+"Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
