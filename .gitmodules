@@ -129,3 +129,6 @@
 	path = bundle/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe
 	branch = master
+[submodule "bundle/slime"]
+	path = bundle/slime
+	url = https://github.com/jpalardy/vim-slime

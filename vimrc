@@ -117,6 +117,9 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <C-J> :OmniSharpNavigateDown<cr> "navigate down by method/property/field
 augroup END
 
+" slime stuff
+let g:slime_target = "tmux"
+
 " add a new line above
 inoremap <S-CR> <C-o>O
 
