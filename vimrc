@@ -15,10 +15,10 @@ set number                     " line numbers
 set pastetoggle=<F5>           " sets paste mode
 set hidden                     " don't close abandoned buffers
 
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set autoindent
+" this is so crontab editing works
+set backupskip=/tmp/*,/private/tmp/*
+
+set autoindent smartindent
 
 set nojoinspaces               " two spaces after a period is soooo archaic
 
@@ -69,6 +69,9 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
+" 4 spaces for most languages
+set shiftwidth=4 softtabstop=4 expandtab
 
 " 2 space languages
 autocmd Filetype coffee     setlocal shiftwidth=2 softtabstop=2
