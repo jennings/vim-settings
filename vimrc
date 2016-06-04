@@ -78,19 +78,38 @@ autocmd Filetype json       setlocal shiftwidth=2 softtabstop=2
 autocmd Filetype ruby       setlocal shiftwidth=2 softtabstop=2
 autocmd Filetype yaml       setlocal shiftwidth=2 softtabstop=2
 
-" tabs, yuck
+" tab languages
 autocmd Filetype gitconfig  setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd Filetype go         setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd Filetype make       setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd Filetype snippets   setlocal shiftwidth=8 softtabstop=8 noexpandtab
 
+" golang
+autocmd Filetype go         setlocal shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType go         compiler go
+autocmd FileType go         nmap <Leader>r  <Plug>(go-run)
+autocmd FileType go         nmap <Leader>b  <Plug>(go-build)
+autocmd FileType go         nmap <Leader>t  <Plug>(go-test)
+autocmd FileType go         nmap <Leader>c  <Plug>(go-coverage)
+autocmd FileType go         nmap <Leader>d  <Plug>(go-doc)
+autocmd FileType go         nmap <Leader>ds <Plug>(go-def-split)
+autocmd FileType go         nmap <Leader>dv <Plug>(go-def-vertical)
+autocmd FileType go         nmap <Leader>dt <Plug>(go-def-tab)
+autocmd FileType go         nmap <Leader>i <Plug>(go-implements)
 
 autocmd FileType lisp       let b:delimitMate_smart_quotes = 0
 
 " OmniSharp stuff
-let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+let g:syntastic_cs_checkers = ['code_checker']
 let g:omnicomplete_fetch_documentation=1
+let g:OmniSharp_server_type = 'roslyn'
+"
+" Force OmniSharp to reload the solution. Useful when switching branches etc.
+nnoremap <leader>rl :OmniSharpReloadSolution<cr>
+nnoremap <leader>cf :OmniSharpCodeFormat<cr>
+
+" (Experimental - uses vim-dispatch or vimproc plugin) - Start the omnisharp server for the current solution
+nnoremap <leader>ss :OmniSharpStartServer<cr>
+nnoremap <leader>sp :OmniSharpStopServer<cr>
 
 augroup omnisharp_commands
     autocmd!
@@ -163,6 +182,8 @@ nnoremap <Leader><Leader> :CtrlPBuffer<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 nnoremap ; :CtrlPMixed<CR>
 
+nnoremap <Leader>? :YcmCompleter GetDoc<CR>
+
 " on Windows, use CTRL-C and CTRL-V for copy/paste
 if has ("win32")
     vnoremap <C-c> "+y
@@ -180,7 +201,6 @@ let g:gundo_playback_delay=200
 " CtrlP: find a repository as the root
 let g:ctrlp_working_path_mode = 'r'
 
-" CtrlP: let's use it more often
 
 " NERDTree: Ignore stuff
 let g:NERDTreeIgnore=[]
