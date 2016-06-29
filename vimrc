@@ -74,7 +74,7 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme cyberpunk
 
 " 4 spaces for most languages
 set shiftwidth=4 softtabstop=4 expandtab
