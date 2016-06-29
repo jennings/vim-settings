@@ -15,8 +15,14 @@ set number                     " line numbers
 set pastetoggle=<F5>           " sets paste mode
 set hidden                     " don't close abandoned buffers
 
-" this is so crontab editing works
-set backupskip=/tmp/*,/private/tmp/*
+" swap files
+if has("win32")
+    set dir^=~/vimfiles/swap
+else
+    set dir^=~/.vim/swap
+    set dir-=~/tmp
+    set backupskip=/tmp/*,/private/tmp/*    " fixes crontab editing
+end
 
 set autoindent smartindent
 
