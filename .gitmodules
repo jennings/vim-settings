@@ -78,10 +78,6 @@
 	path = bundle/clojure-static
 	url = https://github.com/guns/vim-clojure-static
 	branch = master
-[submodule "bundle/rust"]
-	path = bundle/rust
-	url = https://github.com/wting/rust.vim
-	branch = master
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
@@ -131,6 +127,10 @@
 [submodule "bundle/auto-pairs"]
 	path = bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
+	branch = master
+[submodule "bundle/rust"]
+	path = bundle/rust
+	url = https://github.com/rust-lang/rust.vim
 	branch = master
 [submodule "bundle/editorconfig"]
 	path = bundle/editorconfig
