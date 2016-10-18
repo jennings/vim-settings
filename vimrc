@@ -103,7 +103,8 @@ autocmd FileType go         nmap <Leader>d  <Plug>(go-doc)
 autocmd FileType go         nmap <Leader>ds <Plug>(go-def-split)
 autocmd FileType go         nmap <Leader>dv <Plug>(go-def-vertical)
 autocmd FileType go         nmap <Leader>dt <Plug>(go-def-tab)
-autocmd FileType go         nmap <Leader>i <Plug>(go-implements)
+autocmd FileType go         nmap <Leader>i <Plug>(go-imports)
+autocmd FileType go         nmap <Leader>? <Plug>(go-implements)
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
 autocmd FileType lisp       let b:delimitMate_smart_quotes = 0
