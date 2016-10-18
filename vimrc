@@ -14,6 +14,8 @@ set linebreak                  " ...but do it intelligently if we :set wrap
 set number                     " line numbers
 set pastetoggle=<F5>           " sets paste mode
 set hidden                     " don't close abandoned buffers
+set cursorline                 " where am I?
+set relativenumber             " gonna try this again
 
 " swap files
 if has("win32")
