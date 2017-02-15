@@ -132,3 +132,6 @@
 	path = bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
 	branch = master
+[submodule "bundle/editorconfig"]
+	path = bundle/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim
