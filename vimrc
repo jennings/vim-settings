@@ -210,6 +210,9 @@ let g:gundo_playback_delay=200
 
 " CtrlP: find a repository as the root
 let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_custom_ignore = {
+    \ 'dir': 'node_modules[\/]',
+    \ }
 
 
 " NERDTree: Ignore stuff
