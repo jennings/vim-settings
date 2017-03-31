@@ -115,7 +115,9 @@ autocmd FileType lisp       let b:delimitMate_smart_quotes = 0
 let g:syntastic_cs_checkers = ['code_checker']
 let g:omnicomplete_fetch_documentation=1
 let g:OmniSharp_server_type = 'roslyn'
-"
+
+let g:syntastic_rust_checkers = ['rustc']
+
 " Force OmniSharp to reload the solution. Useful when switching branches etc.
 nnoremap <leader>rl :OmniSharpReloadSolution<cr>
 nnoremap <leader>cf :OmniSharpCodeFormat<cr>

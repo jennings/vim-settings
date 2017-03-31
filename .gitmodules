@@ -129,7 +129,7 @@
 	url = https://github.com/jiangmiao/auto-pairs
 	branch = master
 [submodule "bundle/rust"]
-	path = bundle/rust
+	path = bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim
 	branch = master
 [submodule "bundle/editorconfig"]
