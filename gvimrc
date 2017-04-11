@@ -12,8 +12,6 @@ if &diff
     let &columns = ((&columns*2 > 150)? 150: &columns*2)
 endif
 
-colorscheme solarized
-
 set vb            " No audible bell
 set guioptions-=T " No toolbar
 set guioptions+=b " Add horizontal scroll bar
