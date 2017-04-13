@@ -6,14 +6,6 @@
 	path = bundle/indexed-search
 	url = https://github.com/henrik/vim-indexed-search.git
 	branch = master
-[submodule "bundle/markdown"]
-	path = bundle/markdown
-	url = https://github.com/tpope/vim-markdown.git
-	branch = master
-[submodule "bundle/git"]
-	path = bundle/git
-	url = https://github.com/tpope/vim-git.git
-	branch = master
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular
@@ -38,10 +30,6 @@
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
 	branch = master
-[submodule "bundle/powershell"]
-	path = bundle/powershell
-	url = https://github.com/PProvost/vim-ps1.git
-	branch = master
 [submodule "bundle/rails"]
 	path = bundle/rails
 	url = https://github.com/tpope/vim-rails.git
@@ -54,21 +42,9 @@
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
 	branch = master
-[submodule "bundle/javascript"]
-	path = bundle/javascript
-	url = https://github.com/pangloss/vim-javascript
-	branch = master
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = https://github.com/juvenn/mustache.vim
-	branch = master
-[submodule "bundle/html5"]
-	path = bundle/html5
-	url = https://github.com/othree/html5.vim
-	branch = master
-[submodule "bundle/typescript"]
-	path = bundle/typescript
-	url = https://github.com/leafgarland/typescript-vim
 	branch = master
 [submodule "bundle/fireplace"]
 	path = bundle/fireplace
@@ -77,10 +53,6 @@
 [submodule "bundle/clojure-static"]
 	path = bundle/clojure-static
 	url = https://github.com/guns/vim-clojure-static
-	branch = master
-[submodule "bundle/coffee-script"]
-	path = bundle/coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
 	branch = master
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
@@ -106,10 +78,6 @@
 	path = bundle/polyglot
 	url = https://github.com/sheerun/vim-polyglot
 	branch = master
-[submodule "bundle/purescript"]
-	path = bundle/purescript
-	url = https://github.com/raichoo/purescript-vim
-	branch = master
 [submodule "bundle/go"]
 	path = bundle/go
 	url = https://github.com/fatih/vim-go.git
@@ -127,10 +95,6 @@
 [submodule "bundle/auto-pairs"]
 	path = bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
-	branch = master
-[submodule "bundle/rust"]
-	path = bundle/rust.vim
-	url = https://github.com/rust-lang/rust.vim
 	branch = master
 [submodule "bundle/editorconfig"]
 	path = bundle/editorconfig
