@@ -16,6 +16,7 @@ set pastetoggle=<F5>           " sets paste mode
 set hidden                     " don't close abandoned buffers
 set cursorline                 " where am I?
 set relativenumber             " gonna try this again
+set autoread                   " I don't need any more 'load file' dialogs
 
 " swap files
 if has("win32")
