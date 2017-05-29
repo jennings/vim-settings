@@ -139,3 +139,7 @@
 	path = bundle/gitignore
 	url = https://github.com/euclio/gitignore.vim
 	branch = master
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = https://github.com/junegunn/fzf
+	branch = master
