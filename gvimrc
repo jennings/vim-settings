@@ -3,7 +3,9 @@ if has("win32") || has("win64")
 endif
 
 if has("mac")
-    set guifont=Inconsolata:h18
+    set guifont=Fira\ Code:h18
+    set macligatures
+    set macthinstrokes
 endif
 
 set lines=42
