@@ -103,3 +103,7 @@
 	path = bundle/fzf
 	url = https://github.com/junegunn/fzf
 	branch = master
+[submodule "bundle/elm"]
+	path = bundle/elm
+	url = https://github.com/ElmCast/elm-vim
+	branch = master
