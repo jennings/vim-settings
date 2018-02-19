@@ -211,7 +211,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>n :NERDTree<CR>
 nnoremap <Leader><Leader> :CtrlPBuffer<CR>
 nnoremap <Leader>u :GundoToggle<CR>
-nnoremap ; :CtrlPMixed<CR>
+nnoremap ; :FZF<CR>
 
 nnoremap <Leader>? :YcmCompleter GetDoc<CR>
 
@@ -231,6 +231,7 @@ let g:gundo_playback_delay=200
 
 " CtrlP: find a repository as the root
 let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_open_multiple_files = 'ijr'
 let g:ctrlp_custom_ignore = {
     \ 'dir': 'node_modules[\/]',
     \ }
