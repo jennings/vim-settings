@@ -107,6 +107,10 @@
 	path = bundle/closetag
 	url = https://github.com/alvan/vim-closetag
 	branch = master
+[submodule "bundle/airline"]
+	path = bundle/airline
+	url = https://github.com/vim-airline/vim-airline
+	branch = master
 [submodule "bundle/elm"]
 	path = bundle/elm
 	url = https://github.com/ElmCast/elm-vim
