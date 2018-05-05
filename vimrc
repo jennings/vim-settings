@@ -119,6 +119,14 @@ let g:OmniSharp_server_type = 'roslyn'
 
 let g:syntastic_rust_checkers = ['rustc']
 
+" terraform
+autocmd Filetype terraform nnoremap <Leader>f :call TerraformFormatBuffer()<CR>
+function! TerraformFormatBuffer()
+    let l:winposition = winsaveview()
+    %!terraform fmt -
+    call winrestview(l:winposition)
+endfunction
+
 " Force OmniSharp to reload the solution. Useful when switching branches etc.
 nnoremap <leader>rl :OmniSharpReloadSolution<cr>
 nnoremap <leader>cf :OmniSharpCodeFormat<cr>
