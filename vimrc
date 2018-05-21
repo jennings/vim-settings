@@ -2,6 +2,7 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 set noexrc
+set encoding=utf-8
 
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set history=1000               " store lots of :cmdline history
@@ -118,6 +119,10 @@ let g:omnicomplete_fetch_documentation=1
 let g:OmniSharp_server_type = 'roslyn'
 
 let g:syntastic_rust_checkers = ['rustc']
+
+" Search the current repository for the word under the cursor or selected text
+nnoremap <leader>gg viwy:Ggrep <C-R>"<CR>
+vnoremap <leader>gg y:Ggrep "<C-R>""<CR>
 
 " terraform
 autocmd Filetype terraform nnoremap <Leader>f :call TerraformFormatBuffer()<CR>
