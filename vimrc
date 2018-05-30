@@ -113,10 +113,17 @@ let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
 autocmd FileType lisp       let b:delimitMate_smart_quotes = 0
 
+let s:HomeDirectory = expand("<sfile>:p:h:h")
+
 " OmniSharp stuff
 let g:syntastic_cs_checkers = ['code_checker']
 let g:omnicomplete_fetch_documentation=1
 let g:OmniSharp_server_type = 'roslyn'
+let g:OmniSharp_server_path = s:HomeDirectory . '/.omnisharp/OmniSharp.exe'
+if has('unix')
+    let g:OmniSharp_server_use_mono = 1
+endif
+
 
 let g:syntastic_rust_checkers = ['rustc']
 
