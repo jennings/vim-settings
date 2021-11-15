@@ -67,8 +67,25 @@ filetype indent on             " load filetype indenting
 syntax on                      " turn on syntax highlighting
 
 
-execute pathogen#infect()
-execute pathogen#helptags()
+" vim-plug
+let g:plug_shallow=0
+call plug#begin()
+Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go'
+Plug 'junegunn/fzf'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+" Plug 'OmniSharp/omnisharp-vim'
+" Plug 'alvan/vim-closetag'
+" Plug 'godlygeek/tabular'
+" Plug 'juvenn/mustache.vim'
+" Plug 'nvie/vim-rst-tables'
+" Plug 'scrooloose/syntastic'
+" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+call plug#end()
+
 
 "Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
