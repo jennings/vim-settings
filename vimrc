@@ -2,13 +2,10 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 set noexrc
-set encoding=utf-8
 
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set history=1000               " store lots of :cmdline history
 set showcmd                    " show incomplete cmds down the bottom
 set showmode                   " show current mode down the bottom
-set incsearch                  " find the next match as we type the search
 set hlsearch                   " highlight searches by default
 set nowrap                     " don't wrap lines by default...
 set linebreak                  " ...but do it intelligently if we :set wrap
@@ -17,7 +14,6 @@ set pastetoggle=<F5>           " sets paste mode
 set hidden                     " don't close abandoned buffers
 set cursorline                 " where am I?
 set relativenumber             " gonna try this again
-set autoread                   " I don't need any more 'load file' dialogs
 
 " swap files
 if has("win32")
@@ -28,7 +24,7 @@ else
     set backupskip=/tmp/*,/private/tmp/*    " fixes crontab editing
 end
 
-set autoindent smartindent
+set smartindent
 
 set nojoinspaces               " two spaces after a period is soooo archaic
 
@@ -40,16 +36,12 @@ set foldnestmax=3              " deepest fold is 3 levels
 set nofoldenable               " don't fold by default
 
 set wildmode=list:longest      " make cmdline tab completion similar to bash
-set wildmenu                   " enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj       " ignore C stuff
 set wildignore+=*~,*.swp       " ignore Vim cruft
 set wildignore+=*/_site/*      " ignore Jekyll built scripts
 
 set formatoptions-=o           " don't continue comments when pushing o/O
-set formatoptions+=j           " remove comment leader when joining lines with J
 
-set scrolloff=3                " scroll the viewport when X lines from top/bottom edges
-set sidescrolloff=7            " scroll the viewport when X lines from left/right edges
 set sidescroll=1               " minimum lines to scroll left/right
 
 let mapleader = ","            " comma is easier to type
@@ -62,11 +54,6 @@ endif
 set ignorecase                 " ignore case in searches
 set smartcase                  " unless the search string has a capital letter
 
-filetype plugin on             " load filetype plugins
-filetype indent on             " load filetype indenting
-syntax on                      " turn on syntax highlighting
-
-
 " vim-plug
 let g:plug_shallow=0
 call plug#begin()
@@ -75,6 +62,7 @@ Plug 'fatih/vim-go'
 Plug 'junegunn/fzf'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 " Plug 'OmniSharp/omnisharp-vim'
@@ -307,7 +295,6 @@ set statusline+=%=                                  " left/right separator
 set statusline+=col\ %c,\                           " cursor column
 set statusline+=line\ %l/%L                         " cursor line/total lines
 set statusline+=\                                   " end with a space
-set laststatus=2
 
 
 "recalculate the trailing whitespace warning when idle, and after saving
