@@ -59,13 +59,12 @@ let g:plug_shallow=0
 call plug#begin()
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
-Plug 'junegunn/fzf'
-Plug 'sheerun/vim-polyglot'
+" Plug 'junegunn/fzf'
+" Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
-" Plug 'OmniSharp/omnisharp-vim'
 " Plug 'alvan/vim-closetag'
 " Plug 'godlygeek/tabular'
 " Plug 'juvenn/mustache.vim'
@@ -120,16 +119,6 @@ autocmd FileType lisp       let b:delimitMate_smart_quotes = 0
 
 let s:HomeDirectory = expand("<sfile>:p:h:h")
 
-" OmniSharp stuff
-let g:syntastic_cs_checkers = ['code_checker']
-let g:omnicomplete_fetch_documentation=1
-let g:OmniSharp_server_type = 'roslyn'
-let g:OmniSharp_server_path = s:HomeDirectory . '/.omnisharp/OmniSharp.exe'
-if has('unix')
-    let g:OmniSharp_server_use_mono = 1
-endif
-
-
 let g:syntastic_rust_checkers = ['rustc']
 
 " Search the current repository for the word under the cursor or selected text
@@ -143,49 +132,6 @@ function! TerraformFormatBuffer()
     %!terraform fmt -
     call winrestview(l:winposition)
 endfunction
-
-" Force OmniSharp to reload the solution. Useful when switching branches etc.
-nnoremap <leader>rl :OmniSharpReloadSolution<cr>
-nnoremap <leader>cf :OmniSharpCodeFormat<cr>
-
-" (Experimental - uses vim-dispatch or vimproc plugin) - Start the omnisharp server for the current solution
-nnoremap <leader>ss :OmniSharpStartServer<cr>
-nnoremap <leader>sp :OmniSharpStopServer<cr>
-
-augroup omnisharp_commands
-    autocmd!
-
-    "Set autocomplete function to OmniSharp (if not using YouCompleteMe completion plugin)
-    autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
-
-    " Builds can also run asynchronously with vim-dispatch installed
-    autocmd FileType cs nnoremap <leader>b :wa!<cr>:OmniSharpBuildAsync<cr>
-
-    " automatic syntax check on events (TextChanged requires Vim 7.4)
-    autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
-
-    " Automatically add new cs files to the nearest project on save
-    autocmd BufWritePost *.cs call OmniSharp#AddToProject()
-
-    "show type information automatically when the cursor stops moving
-    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
-
-    "The following commands are contextual, based on the current cursor position.
-    autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
-    autocmd FileType cs nnoremap <leader>fi :OmniSharpFindImplementations<cr>
-    autocmd FileType cs nnoremap <leader>ft :OmniSharpFindType<cr>
-    autocmd FileType cs nnoremap <leader>fs :OmniSharpFindSymbol<cr>
-    autocmd FileType cs nnoremap <leader>fu :OmniSharpFindUsages<cr>
-    autocmd FileType cs nnoremap <leader>fm :OmniSharpFindMembers<cr> "finds members in the current buffer
-
-    " cursor can be anywhere on the line containing an issue
-    autocmd FileType cs nnoremap <leader>x  :OmniSharpFixIssue<cr>
-    autocmd FileType cs nnoremap <leader>fx :OmniSharpFixUsings<cr>
-    autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
-    autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
-    autocmd FileType cs nnoremap <C-K> :OmniSharpNavigateUp<cr> "navigate up by method/property/field
-    autocmd FileType cs nnoremap <C-J> :OmniSharpNavigateDown<cr> "navigate down by method/property/field
-augroup END
 
 " trigger ycm automatically
 let g:ycm_semantic_triggers =  {
