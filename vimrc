@@ -58,8 +58,6 @@ set smartcase                  " unless the search string has a capital letter
 let g:plug_shallow=0
 call plug#begin()
 Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go'
-" Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -67,96 +65,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
-" Plug 'alvan/vim-closetag'
-" Plug 'godlygeek/tabular'
-" Plug 'juvenn/mustache.vim'
-" Plug 'nvie/vim-rst-tables'
-" Plug 'scrooloose/syntastic'
-" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 call plug#end()
 
-
-"Highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-match ExtraWhitespace /\s\+$\| \+\ze\t/
-
 set background=dark
-let g:solarized_termcolors=256
 colorscheme cyberpunk
-
-" 4 spaces for most languages
-set shiftwidth=4 softtabstop=4 expandtab
-
-" 2 space languages
-autocmd Filetype coffee     setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype haml       setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype javascript setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype json       setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype ruby       setlocal shiftwidth=2 softtabstop=2
-autocmd Filetype yaml       setlocal shiftwidth=2 softtabstop=2
-
-" tab languages
-autocmd Filetype gitconfig  setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd Filetype make       setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd Filetype snippets   setlocal shiftwidth=8 softtabstop=8 noexpandtab
-
-" golang
-autocmd Filetype go         setlocal shiftwidth=8 softtabstop=8 noexpandtab
-autocmd FileType go         compiler go
-autocmd FileType go         nmap <Leader>r  <Plug>(go-run)
-autocmd FileType go         nmap <Leader>b  <Plug>(go-build)
-autocmd FileType go         nmap <Leader>t  <Plug>(go-test)
-autocmd FileType go         nmap <Leader>c  <Plug>(go-coverage)
-autocmd FileType go         nmap <Leader>d  <Plug>(go-doc)
-autocmd FileType go         nmap <Leader>ds <Plug>(go-def-split)
-autocmd FileType go         nmap <Leader>dv <Plug>(go-def-vertical)
-autocmd FileType go         nmap <Leader>dt <Plug>(go-def-tab)
-autocmd FileType go         nmap <Leader>i <Plug>(go-imports)
-autocmd FileType go         nmap <Leader>? <Plug>(go-implements)
-let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
-
-autocmd FileType lisp       let b:delimitMate_smart_quotes = 0
-
-let s:HomeDirectory = expand("<sfile>:p:h:h")
-
-let g:syntastic_rust_checkers = ['rustc']
-
-" Search the current repository for the word under the cursor or selected text
-nnoremap <leader>gg viwy:Ggrep <C-R>"<CR>
-vnoremap <leader>gg y:Ggrep "<C-R>""<CR>
-
-" terraform
-autocmd Filetype terraform nnoremap <Leader>f :call TerraformFormatBuffer()<CR>
-function! TerraformFormatBuffer()
-    let l:winposition = winsaveview()
-    %!terraform fmt -
-    call winrestview(l:winposition)
-endfunction
-
-" trigger ycm automatically
-let g:ycm_semantic_triggers =  {
-    \   'c' : ['->', '.'],
-    \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-    \             're!\[.*\]\s'],
-    \   'ocaml' : ['.', '#'],
-    \   'cpp,objcpp' : ['->', '.', '::'],
-    \   'perl' : ['->'],
-    \   'php' : ['->', '::'],
-    \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-    \   'ruby' : ['.', '::'],
-    \   'lua' : ['.', ':'],
-    \   'erlang' : [':'],
-    \ }
-
-" slime stuff
-let g:slime_target = "tmux"
-let g:slime_default_config = { "socket_name": "default", "target_pane": ":.1" }
-let g:slime_dont_ask_default = 1
-
-" add a new line above
-inoremap <S-CR> <C-o>O
 
 " easier to clear the highlight
 nnoremap <Esc><Esc> <Esc><Esc>:noh<CR>
@@ -183,12 +95,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap <Leader>n :NERDTree<CR>
-nnoremap <Leader><Leader> :CtrlPBuffer<CR>
-nnoremap <Leader>u :GundoToggle<CR>
 nnoremap ; :Telescope find_files<CR>
-
-nnoremap <Leader>? :YcmCompleter GetDoc<CR>
 
 " on Windows, use CTRL-C and CTRL-V for copy/paste
 if has ("win32")
@@ -197,128 +104,3 @@ if has ("win32")
     nnoremap <C-v> "+p
     inoremap <C-v> <C-o>"+p
 endif
-
-" netrw stuff
-let g:netrw_list_hide='.*\.swp$,^_site/$'
-
-" Gundo
-let g:gundo_playback_delay=200
-
-" CtrlP: find a repository as the root
-let g:ctrlp_working_path_mode = 'r'
-let g:ctrlp_open_multiple_files = 'ijr'
-let g:ctrlp_custom_ignore = {
-    \ 'dir': 'node_modules[\/]',
-    \ }
-
-
-" NERDTree: Ignore stuff
-let g:NERDTreeIgnore=[]
-let g:NERDTreeIgnore+=['\~$']
-let g:NERDTreeIgnore+=['\.py[cod]$']
-let g:NERDTreeIgnore+=['\.[oa]$']
-let g:NERDTreeChDirMode=2
-
-set statusline=\ #%n " buffer number
-set statusline+=\ %t " tail of the filename
-set statusline+=\ %y " filetype
-set statusline+=%r   " read only flag
-set statusline+=%m   " modified flag
-
-set statusline+=%{fugitive#statusline()}            " show git information
-
-set statusline+=%#warningmsg#                                   " warnings
-set statusline+=%{&ff!='unix'?'['.&ff.']':''}                   " warn on line endings
-set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''} " display non-UTF-8 encodings
-set statusline+=%*                                              " end warnings
-
-set statusline+=%#error#                            " errors
-set statusline+=%{StatuslineTabWarning()}           " error on bad indenting
-set statusline+=%{&paste?'[paste]':''}              " [paste] display a warning if &paste is set
-set statusline+=%*                                  " end errors
-
-set statusline+=%{StatuslineTrailingSpaceWarning()} " [\s] warn on trailing spaces
-
-set statusline+=%=                                  " left/right separator
-set statusline+=col\ %c,\                           " cursor column
-set statusline+=line\ %l/%L                         " cursor line/total lines
-set statusline+=\                                   " end with a space
-
-
-"recalculate the trailing whitespace warning when idle, and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_trailing_space_warning
-
-"recalculate the tab warning flag when idle and after writing
-autocmd cursorhold,bufwritepost * unlet! b:statusline_tab_warning
-
-"recalculate the long line warning when idle and after saving
-autocmd cursorhold,bufwritepost * unlet! b:statusline_long_line_warning
-
-"return '[\s]' if trailing white space is detected
-"return '' otherwise
-function! StatuslineTrailingSpaceWarning()
-    if !exists("b:statusline_trailing_space_warning")
-        if search('\s\+$', 'nw') != 0
-            let b:statusline_trailing_space_warning = '[\s]'
-        else
-            let b:statusline_trailing_space_warning = ''
-        endif
-    endif
-    return b:statusline_trailing_space_warning
-endfunction
-
-
-"return '[&et]' if &et is set wrong
-"return '[mixed-indenting]' if spaces and tabs are used to indent
-"return an empty string if everything is fine
-function! StatuslineTabWarning()
-    if !exists("b:statusline_tab_warning")
-        let tabs = search('^\t', 'nw') != 0
-        let spaces = search('^ ', 'nw') != 0
-
-        if tabs && spaces
-            let b:statusline_tab_warning =  '[mixed-indenting]'
-        elseif (spaces && !&et) || (tabs && &et)
-            let b:statusline_tab_warning = '[&expandtab]'
-        else
-            let b:statusline_tab_warning = ''
-        endif
-    endif
-    return b:statusline_tab_warning
-endfunction
-
-
-"visual search mappings
-function! s:VSetSearch()
-    let temp = @@
-    norm! gvy
-    let @/ = '\V' . substitute(escape(@@, '\'), '\n', '\\n', 'g')
-    let @@ = temp
-endfunction
-vnoremap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
-vnoremap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
-
-
-"jump to last cursor position when opening a file
-"dont do it when writing a commit log entry
-autocmd BufReadPost * call SetCursorPosition()
-function! SetCursorPosition()
-    if &filetype !~ 'commit\c'
-        if line("'\"") > 0 && line("'\"") <= line("$")
-            exe "normal! g`\""
-            normal! zz
-        endif
-    end
-endfunction
-
-"define :HighlightLongLines command to highlight the offending parts of
-"lines that are longer than the specified length (defaulting to 80)
-command! -nargs=? HighlightLongLines call s:HighlightLongLines('<args>')
-function! s:HighlightLongLines(width)
-    let targetWidth = a:width != '' ? a:width : 79
-    if targetWidth > 0
-        exec 'match Todo /\%>' . (targetWidth) . 'v/'
-    else
-        echomsg "Usage: HighlightLongLines [natural number]"
-    endif
-endfunction
