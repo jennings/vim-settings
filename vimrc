@@ -59,12 +59,14 @@ let g:plug_shallow=0
 call plug#begin()
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
-" Plug 'junegunn/fzf'
 " Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 " Plug 'alvan/vim-closetag'
 " Plug 'godlygeek/tabular'
 " Plug 'juvenn/mustache.vim'
@@ -184,7 +186,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>n :NERDTree<CR>
 nnoremap <Leader><Leader> :CtrlPBuffer<CR>
 nnoremap <Leader>u :GundoToggle<CR>
-nnoremap ; :FZF<CR>
+nnoremap ; :Telescope find_files<CR>
 
 nnoremap <Leader>? :YcmCompleter GetDoc<CR>
 
