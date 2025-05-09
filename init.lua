@@ -56,3 +56,8 @@ vim.keymap.set('n', ';', ':Telescope find_files<CR>')
 --     nnoremap <C-v> "+p
 --     inoremap <C-v> <C-o>"+p
 -- endif
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "hcl",
+	command = "setlocal expandtab shiftwidth=2 softtabstop=2",
+})
