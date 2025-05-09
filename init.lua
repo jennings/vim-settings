@@ -1,6 +1,9 @@
 local vim = vim
 local Plug = vim.fn['plug#']
 
+vim.opt.number = true
+vim.opt.relativenumber = true
+
 -- vim-plug
 vim.g.plug_shallow = 0
 vim.call('plug#begin')
